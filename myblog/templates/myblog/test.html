@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% extends 'myblog/base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Тестовая страница</title>
+</head>
+<body>
+{% block title %}Информация - {{title.title}}{% endblock %}
+
+{% block content%}
+<h1>Эта страница test</h1>
+
+<h2>Информация - {{title.title}}</h2>
+<h3>Текст - {{title.text}}</h3>
+<h3>Возраст - {{title.age}}</h3>
+<h3>Год рождения - {{title.date_born}}</h3>
+
+
+
+
+{% endblock %}
+</body>
+</html>

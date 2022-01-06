@@ -1,0 +1,21 @@
+
+{% extends 'myblog/base.html' %}
+
+{% block title %}Все записи{% endblock %}
+
+
+{% block content %}
+<h2>Список всех записей</h2>
+<ul>
+    {% for title in titles %}
+        <li><a href="{{title.get_url}}">{{title.title}}</a>, Текст -- {{title.text}}
+                Возраст -- {{title.age}}
+                Год рождения -- {{title.date_born}}
+        </li>
+    {% endfor %}
+
+</ul>
+<a href="{% url 'form' %}">Перейти на страницу формы</a><br>
+
+
+{% endblock %}
