@@ -29,3 +29,6 @@ def get_name(request):
     form = form_model(request.POST)
     return render(request, 'my_form.html', {'form': form})
 
+def about(request):
+    return render(request, 'myblog/about.html')
+
