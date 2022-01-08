@@ -4,4 +4,3 @@ from .models import Post
 
 form_model = modelform_factory(Post, fields=('title', 'text', 'age', 'date_born'))
 
-# form_name = modelform_factory(Post, fields=('title'))

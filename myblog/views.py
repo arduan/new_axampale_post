@@ -20,7 +20,7 @@ def one_show(request, id_title: int):
 
 def get_name(request):
     form = form_model(request.POST)
-    return render(request, 'my_form.html', {'form': form})
+    return render(request, 'myblog/my_form.html', {'form': form})
 
 
 def about(request):
