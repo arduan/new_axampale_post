@@ -1,7 +1,4 @@
-from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseRedirect
-from django.views import View
-from django.views.generic.base import TemplateView
+
 from .models import Post
 from django.shortcuts import render
 from .forms import form_model
