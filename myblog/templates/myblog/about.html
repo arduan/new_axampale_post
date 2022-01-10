@@ -5,7 +5,11 @@
 {% block content %}
     <h1>Информация о сайте</h1>
     <p>Это мой тренировочный сайт.</p>
+<ul>
+    {% for title in titles %}
+        <li><a href="{{title.get_url}}">{{ title.title }}</a>
+        </li>
+    {% endfor %}
 
-    {{ graphП }}
-
+</ul>
 {% endblock %}
