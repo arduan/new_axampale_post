@@ -29,9 +29,8 @@ def about(request):
     titles = Post.objects.order_by('title')
 
     return render(request, 'myblog/about.html',
-
                   {'titles': titles},
-                  {'avg': avg},
+
                 )
 
 
