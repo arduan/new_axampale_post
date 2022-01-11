@@ -2,7 +2,7 @@ from .models import Post
 from django.shortcuts import render
 from .forms import form_model
 
-from django.db.models import Avg
+from django.db.models import Avg, Count
 
 
 def show(request):
@@ -31,10 +31,17 @@ def about(request):
     return render(request, 'myblog/about.html',
                   {'titles': titles},
 
-                )
+                  )
 
 
 def avg(request):
-    avg = Post.objects.aggregate(Avg('age'))
+    avg = Post.objects.all().aggregate(Avg('age'))
 
-    return render(request, 'myblog/avg.html', {'avg': avg},)
+    return render(request, 'myblog/avg.html',
+                  {'avg': avg},)
+
+
+def count(request):
+    count = Post.objects.all().aggregate(Count('age'))
+    return render(request, 'myblog/count.html',
+                  {'count': count}, )

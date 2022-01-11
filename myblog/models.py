@@ -12,6 +12,7 @@ class Post(models.Model):
     date_born = models.DateTimeField('Год рождения')
 
 
+
     def get_url(self):
         return reverse('title-text', args=[self.id])
 
