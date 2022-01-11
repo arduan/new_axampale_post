@@ -35,13 +35,13 @@ def about(request):
 
 
 def avg(request):
-    avg = Post.objects.all().aggregate(Avg('age'))
+    avg = Post.objects.aggregate(Avg('age'))
 
     return render(request, 'myblog/avg.html',
                   {'avg': avg},)
 
 
 def count(request):
-    count = Post.objects.all().aggregate(Count('age'))
+    count = Post.objects.count()
     return render(request, 'myblog/count.html',
                   {'count': count}, )
